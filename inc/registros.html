@@ -1,0 +1,95 @@
+<script src="./js/registros.js"></script>
+<div class="container-fluid">
+    <h1>Registros</h1>
+
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <label for="opciones-tablas">¿Qué quieres ver?</label>
+        <select name="opciones-tablas" id="opciones-tablas" class="form-control">
+            <option value="" disabled="disabled" selected="selected">--Selecciona una opción--</option>
+            <option value="0">Ventas</option>
+            <option value="1">Productos</option>
+            <option value="2">Ingresos</option>
+            <option value="3">Usuarios</option>
+            <option value="4">Registros</option>
+        </select>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <label for="order-by" class="ocultable">Ordenar por</label>
+        <select name="order-by" id="order-by" class="ocultable form-control"></select>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+        <label for="order" class="ocultable">Orden</label>
+        <select name="order" id="order" class="ocultable form-control">
+            <option value="0" disabled="disabled" selected="selected">--Selecciona una opción--</option>
+            <option value="ASC" selected="selected">Ascendente</option>
+            <option value="DESC">Descendente</option>
+        </select>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+        <label for="begin" class="ocultable">Inicio</label>
+        <select name="begin" id="begin" class="ocultable form-control"></select>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+        <label for="end" class="ocultable">Fin</label>
+        <select name="end" id="end" class="ocultable form-control"></select>
+    </div>
+<span id="container-mensajes">
+
+</span>
+
+    <div id="container-universal" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+    </div>
+
+    <div class="modal fade" id="modal-edit-producto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="titulo-modal-producto">Editando producto</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="modal-id-producto" class="form-control" placeholder="Código del producto"
+                           disabled="disabled"><br>
+                    <input type="text" id="modal-nombre-producto" class="form-control" placeholder="Nombre"><br>
+                    <input type="text" id="modal-descripcion-producto" class="form-control"
+                           placeholder="Descripción"><br>
+                    <input type="text" id="modal-existencia-producto" class="form-control" placeholder="Existencia"><br>
+                    <input type="text" id="modal-precio-producto" class="form-control" placeholder="Precio"><br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    <button type="button" id="modal-actualizar-producto" class="btn btn-success">Guardar cambios
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-edit-usuario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Editando usuario</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="modal-id-usuario" class="form-control" placeholder="Id del usuario"
+                           disabled="disabled"><br>
+                    <input type="text" id="modal-nombre-usuario" class="form-control" placeholder="Nombre"><br>
+                    <input type="text" id="modal-segNombre-usuario" class="form-control"
+                           placeholder="Segundo nombre"><br>
+                    <input type="text" id="modal-apPat-usuario" class="form-control" placeholder="Apellido paterno"><br>
+                    <input type="text" id="modal-apMat-usuario" class="form-control" placeholder="Apellido materno"><br>
+                    <input type="text" id="modal-ventasHechas-usuario" class="form-control" placeholder="Ventas hechas"
+                           disabled="disabled"><br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    <button type="button" id="modal-actualizar-usuario" class="btn btn-success">Guardar cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

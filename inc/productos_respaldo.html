@@ -1,0 +1,54 @@
+<script src="./js/jquery.js"></script>
+<script src="./js/productos.js"></script>
+<div class="container-fluid">
+    <h1>Productos</h1>
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <select name="selecciona-accion" id="selecciona-accion" class="form-control">
+            <option value="0" disabled="disabled">--Selecciona opción--</option>
+            <option value="1">Registrar producto nuevo</option>
+            <option value="2">Aumentar existencia de un producto</option>
+        </select><br>
+    </div>
+    <div id="nuevo-producto" class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
+        <h3 id="title-nuevo-prod">Registrar nuevo producto</h3>
+        <span id="mensajes-inserta-productos"></span><br>
+        <input type="text" class="input-inserta-productos form-control" placeholder="Código de producto"
+               id="id-producto">
+        <span class="tooltip-ins-prod" id="tooltip-id-producto"></span><br>
+
+        <input type="text" class="input-inserta-productos form-control" placeholder="Nombre del producto"
+               id="nombre-producto">
+        <span class="tooltip-ins-prod" id="tooltip-nombre-producto"></span><br>
+
+        <input type="text" class="input-inserta-productos form-control" placeholder="Descripción del producto"
+               id="descripcion-producto">
+        <span class="tooltip-ins-prod" id="tooltip-descripcion-producto"></span><br>
+
+        <input type="number" class="input-inserta-productos form-control" placeholder="Cantidad" id="cantidad-producto">
+        <span class="tooltip-ins-prod" id="tooltip-cantidad-producto"></span><br>
+
+        <input type="number" class="input-inserta-productos form-control" placeholder="Precio del producto"
+               id="precio-compra-producto">
+        <input type="number" class="input-inserta-productos form-control" placeholder="Precio del producto"
+               id="precio-venta-producto">
+        <span class="tooltip-ins-prod" id="tooltip-precio-producto"></span><br>
+
+        <button id="registrar-producto" class="btn btn-primary"><span class='glyphicon glyphicon-plus-sign'
+                                                                      aria-hidden='true' hidden></span>&nbsp;Registrar
+        </button>
+        <button class='btn btn-danger' id="btn-cancelar-edicion"><span class='glyphicon glyphicon-ban-circle'
+                                                                       aria-hidden='true' hidden></span>Cancelar
+        </button>
+    </div>
+    <div id="aumenta-producto" class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
+        <h3>Aumentar existencia de un producto</h3>
+        <span id="mensajes-aumenta-productos"></span><br>
+        <input id="id-producto" type="text" class="input-aumenta-productos form-control" placeholder="Código">
+        <span id="tooltip-codigo-producto" class="tooltip-aum-prod"></span><br>
+        <input id="cantidad-producto" type="number" class="input-aumenta-productos form-control" placeholder="Cantidad">
+        <span id="tooltip-cantidad-producto" class="tooltip-aum-prod"></span><br>
+        <button id="btn-aumentar-cantidad" class="btn btn-primary">Registrar</button>
+    </div>
+    <div id="muestra-productos" class="col-xs-12 col-sm-12 col-md-8 col-lg-9"></div>
+</div>

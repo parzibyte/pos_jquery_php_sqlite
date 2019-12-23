@@ -1,0 +1,66 @@
+<script src="./js/ventas.js"></script>
+<div class="container-fluid">
+    <div class="row">
+        <div id="productos-para-venta" class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+            <h3>Escribe el código o escanéalo:</h3>
+            <input type="text" name="cod-prod" id="cod-prod" placeholder="Código" class="form-control">
+
+            <br>
+                <button class="btn btn-success" id = "span-realiza-venta"><kbd>+</kbd>&nbsp;Cobrar venta&nbsp;<span class="glyphicon glyphicon-ok"></span></button>
+                <button class="btn btn-danger" id = "span-cancela-venta"><kbd>/</kbd>&nbsp;Limpiar venta&nbsp;<span class="glyphicon glyphicon-trash"></span></button>
+                <button class="btn btn-warning" id = "span-remueve-ult-prod"><kbd>-</kbd>&nbsp;Quitar último producto&nbsp;<span class="glyphicon glyphicon-remove"></span></button>
+            <span id="contenedor-mensajes-productos"></span>
+            <hr>
+            <h1 id="contenedor-total-venta"></h1>
+            <table border="1" id="tabla-productos-venta" class="table table-striped table-hover table-condensed table-responsive">
+                <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Remover</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div id="cobrar-venta" class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <button class="btn btn-success col-xs-12 col-sm-12 col-md-12 col-lg-12"><kbd>Enter</kbd> Realizar venta</button>
+            <br><br>
+            <button class="btn btn-danger col-xs-12 col-sm-12 col-md-12 col-lg-12"><kbd>/</kbd> Cancelar venta</button>
+            <br><br>
+            <button class="btn btn-info col-xs-12 col-sm-12 col-md-12 col-lg-12"><kbd>-</kbd> Aplicar descuento</button><br><br>
+            <hr>
+            <h4>El cliente paga con:</h4>
+            <input type="number" id="input-pago-cliente" name="pago-cliente" placeholder="Pago del cliente"
+                   class="form-control">
+            <br><input class="checkbox" type="checkbox" id="cb-descuento" data-label-text = "¿Hacer descuento?" data-off-color = "info" data-off-text = "No" data-on-text = "Sí" data-animate = "false">
+            <br><br><input type="number" max="99" min="1" id="input-descuento" class="form-control" placeholder="Porcentaje de descuento del 1 al 99" data-toggle="tooltip" data-placement="left" title="Ingresa un número real, entre 1 y 99." data-trigger = "manual">
+            <h3 id="mostrar-total-venta"></h3>
+            <h3 id="mostrar-cambio-venta"></h3>
+            <span id="mostrar-texto-venta"></span>
+
+        </div>
+        <!--Modals-->
+        <div class="modal fade" id="modal-realiza-venta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span>
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="titulo-modal-producto">Encabezado</h4>
+                </div>
+                <div class="modal-body">
+                    Contenido del modal
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    <button type="button" id="modal-actualizar-producto" class="btn btn-success">Guardar cambios
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
